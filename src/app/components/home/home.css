@@ -1,0 +1,127 @@
+:host { display: block; color: #e9ecff; }
+
+/* ---------- LAYOUT BASE ---------- */
+.neon-home {
+  position: relative;
+  min-height: 720px;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+.content { position: relative; z-index: 1; padding: 4rem 2rem 2rem; }
+
+/* ---------- GLASS ---------- */
+.glass,
+mat-card.glass,
+mat-toolbar.glass {
+  background: rgba(255, 255, 255, 0.123) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* ---------- TOOLBAR / BRAND ---------- */
+span{
+    color: white;
+    font-weight: 600;
+}
+.iconos_nav{
+    color: white;
+}
+.toolbar { padding-inline: .5rem; margin-bottom: .75rem; }
+.brand { display: flex; align-items: center; gap: .6rem; }
+.logo {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,.35);
+}
+.brand-text .title {
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .3px; color: #f5f7ff;
+  text-shadow: 0 0 14px rgba(112,122,255,.35);
+}
+.brand-text .subtitle { font-size: .78rem; color: #cfd5ff; }
+.spacer { flex: 1; }
+
+.blue-chip { background: #3b82f6 !important; color: #fff !important; }
+.user-chip mat-chip {
+  background: rgba(0,0,0,.15);
+  border: 1px solid rgba(179,191,255,.35);
+  color: #fff;
+}
+
+/* ---------- ICON HELPERS ---------- */
+mat-icon.sm   { font-size: 20px; height: 20px; width: 20px; line-height: 20px; }
+mat-icon.tiny { font-size: 16px; height: 16px; width: 16px; line-height: 16px; }
+
+/* ---------- BUTTONS ---------- */
+.btn-light.mat-mdc-unelevated-button {
+  --mdc-filled-button-container-color: #fff;
+  --mdc-filled-button-label-text-color: #0a0b10;
+  box-shadow: 0 8px 18px rgba(0,0,0,.30);
+}
+.btn-light:hover { filter: brightness(1.03); }
+.user-chip + .btn-light.mat-mdc-unelevated-button { margin-inline-start: 18px; }
+
+.btn-outline.mat-mdc-outlined-button {
+  --mdc-outlined-button-outline-color: rgba(190,205,255,.85);
+  --mdc-outlined-button-label-text-color: #eef1ff;
+}
+.btn-outline:hover { background: rgba(255,255,255,.10); }
+.btn-sm.mat-mdc-button-base { height: 34px; padding: 0 .78rem; font-size: .92rem; }
+
+/* ---------- SECCIONES ---------- */
+.games { padding: 1rem 0 1.25rem; }
+.games-head { margin-bottom: .5rem; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.section-title { font-weight: 700; color: #f0f3ff; text-shadow: 0 0 10px rgba(99,102,241,.30); }
+.section-sub { font-size: .82rem; color: #cbd2ff; display: inline-flex; gap: .25rem; align-items: center; }
+
+/* ---------- GRID ---------- */
+.grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- GAME CARD ---------- */
+.game-card { position: relative; border-radius: 1rem; transition: transform .2s ease; }
+.game-card:hover { transform: translateY(-2px) scale(1.01); }
+
+.halo {
+  position: absolute; inset: -6px; border-radius: 1.2rem;
+  filter: blur(20px); opacity: .6; transition: opacity .2s ease;
+}
+.game-card:hover .halo { opacity: .9; }
+
+.game {
+  position: relative; z-index: 1; padding: 1rem;
+  color: #fff; text-decoration: none; border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.game-icon {
+  width: 44px; height: 44px; border-radius: .85rem;
+  display: grid; place-items: center; margin-bottom: .8rem; color: #0a0b10;
+}
+.game-title { margin: 0 0 .25rem; font-size: 1.06rem; color: #f7f8ff; }
+.game-desc  { margin: 0 0 .8rem;  font-size: .92rem; color: #dbe0ff; }
+.game-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+/* Gradientes por juego */
+.grad-fuchsia-indigo .game-icon { background: linear-gradient(135deg, #d946ef, #6366f1); }
+.grad-fuchsia-indigo .halo      { background: linear-gradient(135deg, rgba(217,70,239,.95), rgba(99,102,241,.95)); }
+.grad-cyan-blue .game-icon      { background: linear-gradient(135deg, #22d3ee, #3b82f6); }
+.grad-cyan-blue .halo           { background: linear-gradient(135deg, rgba(34,211,238,.95), rgba(59,130,246,.95)); }
+.grad-emerald-teal .game-icon   { background: linear-gradient(135deg, #10b981, #14b8a6); }
+.grad-emerald-teal .halo        { background: linear-gradient(135deg, rgba(16,185,129,.95), rgba(20,184,166,.95)); }
+.grad-amber-rose .game-icon     { background: linear-gradient(135deg, #f59e0b, #f43f5e); }
+.grad-amber-rose .halo          { background: linear-gradient(135deg, rgba(245,158,11,.98), rgba(244,63,94,.95)); }
+
+/* ---------- CTA CARDS ---------- */
+.cta-cards { display: grid; gap: 1rem; grid-template-columns: 1fr; padding-bottom: 1.25rem; }
+@media (min-width: 768px) { .cta-cards { grid-template-columns: repeat(3, 1fr); } }
+.mini-card { padding: .5rem .75rem 1rem; }
+.card-title { font-size: 1.06rem; margin: .25rem 0 .5rem; color: #f0f3ff; }
+.card-desc  { font-size: .94rem; margin: .25rem 0 .75rem; color: #dbe0ff; }
+
+/* ---------- LINKS ---------- */
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: none; }
+
+

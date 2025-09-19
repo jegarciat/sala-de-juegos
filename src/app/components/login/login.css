@@ -1,0 +1,70 @@
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  place-items: center;
+  text-align: center;
+  gap: 1px;
+  padding: 5px;
+}
+
+.login-container h2,
+.login-container span{
+  color: #fff;
+}
+
+.login-field .mat-mdc-form-field-subscript-wrapper,
+.login-field .mat-mdc-form-field-hint,
+.login-field .mat-mdc-form-field-error{
+  color: #fff;
+}
+.login-field .mdc-floating-label{
+  color: #fff;
+}
+
+.login-field{
+  width: 320px;
+  margin: 7px 0;
+}
+.login-field .mdc-text-field{
+  --mdc-outlined-text-field-container-color: #fff;
+  --mdc-outlined-text-field-outline-color: #ccc;
+  --mdc-outlined-text-field-hover-outline-color: #ccc;
+  --mdc-outlined-text-field-focus-outline-color: #ccc;
+  border-radius: 10px;
+}
+.login-field .mdc-notched-outline__leading,
+.login-field .mdc-notched-outline__notch,
+.login-field .mdc-notched-outline__trailing{
+  border-width: 4px;
+}
+.login-field .mdc-text-field--focused .mdc-notched-outline__leading,
+.login-field .mdc-text-field--focused .mdc-notched-outline__notch,
+.login-field .mdc-notched-outline__trailing,
+.login-field .mdc-text-field:hover .mdc-notched-outline__leading,
+.login-field .mdc-text-field:hover .mdc-notched-outline__notch,
+.login-field .mdc-text-field:hover .mdc-notched-outline__trailing{
+  border-color: #ccc;
+}
+
+.mat-mdc-input-element{ color:#222; }
+.mat-mdc-input-element::placeholder{ color:#808080; }
+
+.login-button{ color:#fff; }
+.login-button:hover{ background-color:#9481ff; }
+
+.prefill-button{
+  margin-top: 8px;
+  color:#fff;
+  border-color:#ccc;
+}
+
+.register-link-container{ margin-top:20px; }
+.register-link{
+  color:#007bff;
+  text-decoration:none;
+  font-size:14px;
+}
+.register-link:hover{ text-decoration:underline; }

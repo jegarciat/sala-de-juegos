@@ -1,0 +1,39 @@
+<div class="login-container">
+  <h2>Login</h2>
+
+  <mat-form-field class="login-field">
+    <input
+      matInput
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field class="login-field">
+    <input
+      matInput
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      required
+    />
+  </mat-form-field>
+
+  <button mat-raised-button (click)="login()" class="login-button">
+    Ingresar
+  </button>
+
+  <div class="register-link-container">
+    <span>
+      ¿No tenés una cuenta?
+      <a routerLink="../registro" class="register-link"> Registrate acá</a>
+    </span>
+  </div><br>
+  
+  <button mat-raised-button (click)="quickFill()" class="prefill-button">
+    Autocompletar
+  </button>
+
+</div>

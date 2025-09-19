@@ -1,0 +1,75 @@
+.register-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    place-items: center; 
+    text-align: center;
+    gap: 1px;
+    padding: 5px;
+}
+
+.register-container h2,
+.register-container span{
+  color: #fff;
+}
+
+.register-field .mat-mdc-form-field-subscript-wrapper,
+.register-field .mat-mdc-form-field-hint,
+.register-field .mat-mdc-form-field-error{
+  color: #fff;
+}
+
+.register-field .mdc-floating-label{
+  color: #fff;
+}
+
+.register-field{
+  width: 320px;
+  margin: 7px 0;
+}
+.register-field .mdc-text-field{
+  --mdc-outlined-text-field-container-color: #fff; 
+  --mdc-outlined-text-field-outline-color: #ccc;
+  --mdc-outlined-text-field-hover-outline-color: #ccc;
+  --mdc-outlined-text-field-focus-outline-color: #ccc;
+
+  border-radius: 10px;
+}
+
+.register-field .mdc-notched-outline__leading,
+.register-field .mdc-notched-outline__notch,
+.register-field .mdc-notched-outline__trailing{
+  border-width: 4px;
+}
+.register-field .mdc-text-field--focused .mdc-notched-outline__leading,
+.register-field .mdc-text-field--focused .mdc-notched-outline__notch,
+.register-field .mdc-text-field--focused .mdc-notched-outline__trailing,
+.register-field .mdc-text-field:hover .mdc-notched-outline__leading,
+.register-field .mdc-text-field:hover .mdc-notched-outline__notch,
+.register-field .mdc-text-field:hover .mdc-notched-outline__trailing{
+  border-color: #ccc;
+}
+.mat-mdc-input-element{ color:#222; }               
+.mat-mdc-input-element::placeholder{ color:#808080; } 
+
+.register-button{ color:#fff; }
+.login-link{ color:#7fb0ff; }
+
+.register-button:hover {
+    background-color: #9481ff;
+}
+
+.login-link-container {
+    margin-top: 20px;
+}
+.login-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

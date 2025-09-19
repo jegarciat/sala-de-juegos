@@ -1,0 +1,40 @@
+<div class="register-container">
+  <h2>Registro</h2>
+  <mat-form-field class="register-field">
+    <input
+      matInput
+      type="text"
+      placeholder="Email"
+      [(ngModel)]="email"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="register-field">
+    <input
+      matInput
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="register-field">
+    <input
+      matInput
+      type="text"
+      minlength="3"
+      placeholder="Nombre"
+      [(ngModel)]="name"
+    />
+  </mat-form-field>
+  <button mat-raised-button (click)="registro()" class="register-button">
+    Registrarse
+  </button>
+  <div class="login-link-container">
+    <span>
+      ¿Ya tenés una cuenta?
+      <a routerLink="../login" class="login-link"> Ingresa acá</a>
+    </span>
+  </div>
+</div>
+

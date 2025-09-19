@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("./assets/login.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+:host{
+    display: block;
+    min-height: 100dvh;     
+    background: url("./assets/login.png") no-repeat center center fixed;
+    position: relative;
+}
+:host::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+}

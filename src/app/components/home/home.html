@@ -1,0 +1,120 @@
+<div class="neon-home">
+  <div class="bg-base" aria-hidden="true"></div>
+  <div class="blob blob-fuchsia" aria-hidden="true"></div>
+  <div class="blob blob-indigo" aria-hidden="true"></div>
+  <mat-toolbar class="toolbar glass navbar">
+      <div class="brand">
+      <div class="logo">
+          <mat-icon class="iconos_nav">sports_esports</mat-icon>
+      </div>
+      <div class="brand-text">
+          <div class="title">Sala de Juegos</div>
+          <div class="subtitle">Laboratorio IV</div>
+      </div>
+      </div>
+
+    <span class="spacer"></span>
+
+    <!-- Links centrados -->
+    <nav class="nav-links">
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <mat-icon class="sm iconos_nav">home</mat-icon>
+        <span>Inicio</span>
+      </a>
+      <a mat-button routerLink="/about" routerLinkActive="active">
+        <mat-icon class="sm iconos_nav">info</mat-icon>
+        <span>Quién soy</span>
+      </a>
+    </nav>
+
+    <span class="spacer"></span>
+
+    <!-- Chip de usuario -->
+    <mat-chip-set class="user-chip">
+      <mat-chip class="blue-chip">
+        <mat-icon matChipAvatar class="sm">account_circle</mat-icon>
+        {{ guestLabel }}
+      </mat-chip>
+    </mat-chip-set>
+
+    <!-- Login -->
+    <a mat-flat-button class="btn-light login-btn" [routerLink]="['/login']">
+      <mat-icon class="sm">login</mat-icon>
+      Iniciar sesión
+    </a>
+  </mat-toolbar>
+
+  <div class="content">
+
+    <section class="games">
+      <div class="games-head">
+        <h3 class="section-title">Juegos</h3>
+        <div class="section-sub">
+          <mat-icon class="tiny">grade</mat-icon>
+          Elige un juego para comenzar a entrenar tu mente.
+        </div>
+      </div>
+
+    <div class="grid">
+      @for (g of games; track g) {
+        <article class="game-card" [ngClass]="g.gradientClass">
+          <div class="halo" aria-hidden="true"></div>
+
+          <mat-card class="game glass">
+            <div class="game-icon">
+              <mat-icon>{{ g.icon }}</mat-icon>
+            </div>
+            <h4 class="game-title">{{ g.title }}</h4>
+            <p class="game-desc">{{ g.desc }}</p>
+
+            <div class="game-actions">
+              <a mat-flat-button class="btn-light btn-sm" (click)="irAJuego(g.ruta)">Jugar</a>
+            </div>
+          </mat-card>
+        </article>
+      } 
+    </div>
+    </section>
+
+    <section class="cta-cards">
+      <mat-card class="mini-card glass">
+        <mat-card-title class="card-title">Estadísticas</mat-card-title>
+        <mat-card-content class="card-desc">
+          Revisá las estadísticas por juego.
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button class="btn-outline btn-sm" [routerLink]="['/resultados']">
+            <mat-icon class="sm">list_alt</mat-icon>
+            Ver listados
+          </a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="mini-card glass">
+        <mat-card-title class="card-title">Encuesta</mat-card-title>
+        <mat-card-content class="card-desc">
+            Completá la encuesta y ayudanos a mejorar.
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button class="btn-outline btn-sm" [routerLink]="['/encuesta']">
+            <mat-icon class="sm">list_alt</mat-icon>
+            Ir a encuesta
+          </a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="mini-card glass">
+        <mat-card-title class="card-title">Chat</mat-card-title>
+        <mat-card-content class="card-desc">
+          Accedé al chat
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button class="btn-outline btn-sm" [routerLink]="['/chat']">
+            <mat-icon class="sm">chat</mat-icon>
+            Entrar al chat
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+  </div>
+</div>
